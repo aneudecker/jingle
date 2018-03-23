@@ -1,0 +1,7 @@
+^.+\.Rproj$
+^\.Rproj\.user$
+^libWin$
+^libLinux$
+^libMac$
+^RScripts$
+^reports$

@@ -1,0 +1,15 @@
+Package: jingle
+Title: Schedule Audio Playback
+Version: 0.0.1
+Author: Andreas Neudecker
+Maintainer: Andreas Neudecker <a.neudecker@posteo.de>
+Description: This package lets you schedule playback of audio files.
+    This can be used for tournaments where you have a fixed game
+    length and want to play jingles at the beginning, 5 min before the
+    end etc.
+Depends: R (>= 3.3.3)
+License: MIT 
+Encoding: UTF-8
+LazyData: true
+Suggests: lintr,
+   testthat
