@@ -1,0 +1,58 @@
+hr {
+    border-top:2px #b5b5b5 solid;
+}
+
+.well {
+    margin-right: 20px;
+}
+
+#jingles {
+    display: flex;
+}
+
+.jingle-box {
+    border: 1px solid #0c0d0e;
+    padding: 19px;
+    background-color: #0c4a3c;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.jingle-box .length-input {
+    display: none;
+}
+
+.jingle-box .offset-input input {
+    width: 80px
+}
+
+input#slotLength, input#slotCount {
+    width: 80px;
+}
+
+#date input {
+    width: 160px;
+}
+
+#musicIndex + .selectize-control .selectize-input {
+    max-width: 240px;
+}
+
+/* toggle-switch */
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
+    background-color: #0c4a3c;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default {
+    color: #fff;
+    background: #b32020;
+}
+
+.bootstrap-switch {
+    background-color: white;
+    border: 3px #fff solid;
+    border-radius: 7px;
+    font-weight: 700;
+}

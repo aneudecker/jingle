@@ -19,3 +19,15 @@ test_that("Change Volume", {
   index <- sample(1:nrow(streams), 1)
   expect_true(setVolume(streams$index[index]))
 })
+
+test_that("OS Support", {
+  expect_is(getOS(), "character")
+  expect_is(getSupportedOS(), "character")
+  expect_is(isSupportedOS(getOS()), "logical")
+})
+
+test_that("Audio Support Linux", {
+  skip_if_not(getOS() == "Linux")
+  expect_is(testDepsLinux(), "logical")
+  expect_is(getDepsLinux(), "character")
+})

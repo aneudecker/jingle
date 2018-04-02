@@ -4,4 +4,5 @@
 #' @importFrom shinyjs runjs useShinyjs
 #' @importFrom shinythemes shinytheme
 #' @importFrom shinyTime timeInput
+#' @importFrom shinyWidgets switchInput
 NULL

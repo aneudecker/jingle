@@ -2,6 +2,44 @@ getOS <- function(){
   Sys.info()["sysname"]
 }
 
+getSupportedOS <- function(){
+  "Linux"
+}
+
+#' @export
+isSupportedOS <- function(os = getOS()){
+  os %in% getSupportedOS()
+}
+
+#' @export
+testDeps <- function(os = getOS()){
+  switch(
+    os,
+    Linux = testDepsLinux(),
+    FALSE
+  )
+}
+
+#' @export
+getDeps <- function(os = getOS()){
+  switch(
+    os,
+    Linux = getDepsLinux()
+  )
+}
+
+getDepsLinux <- function(){
+  c("pacmd and pactl need to be installed")
+}
+
+testDepsLinux <- function(){
+  code1 <- system2("pacmd", args = "--version")
+  code2 <- system2("pactl", args = "--version")
+
+  return(code1 == 0 & code2 == 0)
+}
+
+#' @export
 audioStreams <- function(){
   switch(
     getOS(),
@@ -11,7 +49,7 @@ audioStreams <- function(){
 }
 
 audioStreamsLinux <- function(){
-  out <- system2("/usr/bin/pacmd", args = "list-sink-inputs",
+  out <- system2("pacmd", args = "list-sink-inputs",
                  stdout = TRUE)
 
   pattern <- "[ ]*index: ([0-9]+)"
@@ -32,6 +70,7 @@ audioStreamsLinux <- function(){
   )
 }
 
+#' @export
 setVolume <- function(...){
   switch(
     getOS(),
