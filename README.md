@@ -3,6 +3,8 @@ This is an `R` package to schedule audio execution. It can
 - Play audio at regular recurring times via the HTML5 audio tag
 - Mute and unmute an external audio source when jingles are played - this is currently supported in Linux only.
 
+![Screenshot](screenshot.png)
+
 ## Prerequisites
 Muting and Unmuting external audio is currently only supported in Linux. You need to use `pulseaudio` for audio control and have `pacmd` and `pactl` installed (Debian/Ubuntu: Package `pulseaudio-utils`)
 
