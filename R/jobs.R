@@ -23,4 +23,3 @@ executeMute <- function(index, ...){
 executeUnmute <- function(index, volume, ...){
   setVolume(index, volume)
 }
-

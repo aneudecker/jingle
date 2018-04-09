@@ -119,7 +119,7 @@ function(input, output, session){
     if (!input$running)
       return(NULL)
 
-    index <- if (input$musicIndex == "") NULL
+    index <- if (is.null(input$musicIndex) | input$musicIndex == "") NULL
              else input$musicIndex
 
     stack$schedule <- scheduleData(
