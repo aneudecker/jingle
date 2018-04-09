@@ -1,6 +1,6 @@
 Package: jingle
 Title: Schedule Audio Playback
-Version: 0.0.1
+Version: 0.0.2
 Author: Andreas Neudecker
 Maintainer: Andreas Neudecker <a.neudecker@posteo.de>
 Description: This package lets you schedule playback of audio files.
